@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おみくじ2</title>
+</head>
+
+<body>
+    <button id="btn">占う</button>
+    <p><img id="result" src="https://trident.takagino.net/doc2024/javascript/assets/04/omikuji/omikuji.png" alt="占う">
+    </p>
+    <p id="message">何か一言が表示されます。</p>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const result = document.getElementById('result');
+        const message = document.getElementById('message');
+        const path = `https://trident.takagino.net/doc2024/javascript/assets/04/omikuji`
+
+        btn.addEventListener('click', function () {
+            let num = Math.floor(Math.random() * 5);
+
+
+            switch (num) {
+                case 0:
+                    result.setAttribute('src',);
+                    message.innerHTML = '空から大量のお菓子が降ってきた🤩';
+                    break;
+                case 1:
+                    result.innerHTML = '中吉';
+                    message.innerHTML = '知らない人からお菓子をもらったよ！ラッキー★';
+                    break;
+                case 2:
+                    result.innerHTML = '小吉';
+                    message.innerHTML = '欲しいお菓子をゲット！！';
+                    break;
+                case 3:
+                    result.innerHTML = '凶';
+                    message.innerHTML = '道端でガムを踏んじゃった😢';
+                    break;
+                default:
+                    result.innerHTML = '大凶';
+                    message.innerHTML = 'お菓子を食べすぎて、体重が２０キロ増えちゃった💦';
+                    break;
+            }
+        })
+    </script>
+</body>
+
+</html>
