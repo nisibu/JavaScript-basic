@@ -54,13 +54,23 @@
         const chr = document.querySelectorAll('.chr img');
         const hp = document.querySelectorAll('.chr p');
         const msg = document.querySelector('.msg');
-
-        let num = Math.floor(Math.random() * 5) + 5;
+        let num = [];
 
         for (let i = 0; i < chr.length; i++) {
+
+            num[i] = Math.floor(Math.random() * 5 + 5);
+            hp[i].innerHTML = "HP:" + num[i];
+
             chr[i].addEventListener('click', function () {
-                num -= 1;
-            })
+                if (num[i] > 0) {
+                    num[i]--;
+                    hp[i].innerHTML = "HP:" + num[i];
+                }
+
+                if ((num[0] + num[1] + num[2]) <= 0) {
+                    msg.innerHTML = "おめでとう！"
+                }
+            });
         }
     </script>
 </body>

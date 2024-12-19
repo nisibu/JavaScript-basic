@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>関数</title>
+</head>
+
+<body>
+    <h1>見出し</h1>
+    <p>本文</p>
+    <button>ボタン</button>
+    <script>
+        // console.log(testFunc());
+        // testFunc(30, 50);
+
+        // let doller = changeDoller(100);
+        // console.log(doller);
+
+        // function changeDoller(yen) {
+        //     return yen * 150;
+        // }
+
+        // let text = setText('takagi');
+        // console.log(text);
+
+        // function setText(txt) {
+        //     return 'Hello! ${txt}'
+        // }
+
+        // const testFunc = function (val1, val2) {
+        //     return val1 + val2;
+        // };
+
+        // console.log(testFunc(10, 20));
+
+        // const setZero = (val) => {
+        //     if (val < 10) {
+        //         return `0${val}`;
+        //     } else {
+        //         return val;
+        //     }
+        // }
+
+        // console.log(setZero(10));
+        // let num = 0;
+        // let value = [5, 10, 15, 20, 25];
+        // const getAverage = (val) => {
+
+        //     for (let i = 0; i < value.length; i++) {
+        //         num += val[i];
+        //     }
+
+        //     num /= val.length;
+        //     return num;
+        // };
+
+        // console.log(getAverage(value));
+
+        // const cliclEvent = (e) => {
+        //     console.log("e");
+        // }
+
+        // window.addEventListener('click', (e) => {
+        //     console.log(e.target);
+        //     e.target.style.color = "#f00"
+        // });
+
+        let count = 0;
+        let timar;
+
+        const countUp = () => {
+            console.log(count++);
+
+            if (count > 5) {
+                clearInterval(timar);
+            }
+        };
+
+        setInterval(countUp, 1000);
+    </script>
+</body>
+
+</html>
